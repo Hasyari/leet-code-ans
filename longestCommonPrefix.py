@@ -8,10 +8,15 @@ data_long = ["flower","flow","flight"]
 
 
 
-for datas in data_long:
-    for data in [x for x in data_long if x != datas]:
-        pass
-    print()
 
+def longestCommonPrefix():
+    res = ""
+    for i in range(len(data_long[0])):
+        for s in data_long:
+            if i == len(s) or s[i] != data_long[0][i]:
+                return(res)
+        res += data_long[0][i]
+    return(res)
+        
 
-
+print(longestCommonPrefix())
